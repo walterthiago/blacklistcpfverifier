@@ -119,7 +119,7 @@ describe('cpf.controller', () => {
 
       const cpfMock = 'xxxxxxx';
 
-      const req = new RequestMock({ body: { cpf: cpfMock } });
+      const req = new RequestMock({ params: { cpf: cpfMock } });
       const res = new ResponseMock();
 
       return cpfController.removeFromBlacklist(req, res).then(() => {
@@ -151,7 +151,7 @@ describe('cpf.controller', () => {
         });
       };
 
-      const req = new RequestMock({ body: { cpf: cpfMock } });
+      const req = new RequestMock({ params: { cpf: cpfMock } });
       const res = new ResponseMock();
 
       return cpfController.removeFromBlacklist(req, res).then(() => {
@@ -174,7 +174,7 @@ describe('cpf.controller', () => {
         return Promise.resolve(false);
       };
 
-      const req = new RequestMock({ body: { cpf: cpfMock } });
+      const req = new RequestMock({ params: { cpf: cpfMock } });
       const res = new ResponseMock();
 
       return cpfController.removeFromBlacklist(req, res).then(() => {

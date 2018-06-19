@@ -8,6 +8,6 @@ router.post('/cpf', cpfController.putInBlacklist);
 
 router.get('/cpf', cpfController.listBlacklist);
 
-router.delete('/cpf', cpfController.removeFromBlacklist);
+router.delete('/cpf/:cpf', cpfController.removeFromBlacklist);
 
 module.exports = exports = router;

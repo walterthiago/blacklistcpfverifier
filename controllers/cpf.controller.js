@@ -42,7 +42,7 @@ const listBlacklist = (req, res) => {
 
 const removeFromBlacklist = (req, res) => {
 
-  const cpf = req.body.cpf;
+  const cpf = req.params.cpf;
 
   return cpfService.cpfIsValid(cpf).then(cpfIsValid => {
 

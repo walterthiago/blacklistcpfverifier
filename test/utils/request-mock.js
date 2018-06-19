@@ -11,6 +11,10 @@ module.exports = exports = class RequestMock {
       this.body = args.body;
     }
 
+    if (args.params) {
+      this.params = args.params;
+    }
+
   }
 
 }
