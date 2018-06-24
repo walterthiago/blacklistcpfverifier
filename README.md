@@ -2,7 +2,7 @@
 
 ## Introduction
 
-> It checks and manages if a CPF is blacklisted. Lets you add and remove CPFs from this blacklist.
+> It checks and manages if a CPF is blacklisted. Let you add and remove CPFs from this blacklist.
 
 ## Code Samples
 
@@ -30,8 +30,7 @@
 > To run project, follow the instructions below:
 
 * Install docker and docker compose.
-* Run ``$ docker-compose up -d`` to create docker dependencies
-* Run ``$ npm install && npm start`` to download node dependencies and run project
+* Run ``$ ./start.sh`` to create docker dependencies and to run docker containers
 
-> To test project:
-* After to follow the installation instructions, run ``$ npm test``
+> Running unit tests:
+* ``$ npm install && npm test``
