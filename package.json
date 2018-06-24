@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "MAXMILHAS_ENV=test mocha ./test/**/*.test.js"
+    "start": "node index.js",
+    "test": "APP_ENV=test mocha ./test/**/*.test.js"
   },
   "author": "",
   "license": "ISC",
