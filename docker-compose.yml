@@ -1,11 +1,27 @@
 version: "3"
 services:
-  mongo:
-    container_name: mongo-maxmilhas-api
+  blacklistcpfverifier-backend:
+    environment:
+      - MONGO_HOST=blacklistcpfverifier-mongo
+      - MONGO_PORT=27017
+      - MONGO_DATABASE=admin
+      - MONGO_USERNAME=root
+      - MONGO_PASSWORD=root
+    container_name: blacklistcpfverifier-backend
+    restart: always
+    build: .
+    ports:
+      - "3000:8080"
+    depends_on:
+      - blacklistcpfverifier-mongo
+    links:
+      - blacklistcpfverifier-mongo
+  blacklistcpfverifier-mongo:
+    container_name: blacklistcpfverifier-mongo
     image: "mongo:latest"
     ports: 
       - "27018:27017"
     environment:
-      MONGO_INITDB_DATABASE: 'admin'
-      MONGO_INITDB_ROOT_USERNAME: 'root'
-      MONGO_INITDB_ROOT_PASSWORD: 'root'
+      - MONGO_INITDB_DATABASE=admin
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=root
